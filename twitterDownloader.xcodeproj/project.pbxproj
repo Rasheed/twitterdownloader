@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					52EA61991E533B4400EF3CC9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z42T35L6W6;
 						ProvisioningStyle = Automatic;
 					};
 					52EA61AD1E533B4400EF3CC9 = {
@@ -412,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z42T35L6W6;
 				INFOPLIST_FILE = twitterDownloader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloader;
@@ -424,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z42T35L6W6;
 				INFOPLIST_FILE = twitterDownloader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloader;

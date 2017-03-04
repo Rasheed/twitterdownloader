@@ -17,6 +17,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var linkField: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let urlString = UIPasteboard.general.string, urlString.isTwitterURL {
+            linkField.text = urlString
+        }
+    }
+    
     @IBAction func didClickDownload(_ sender: Any) {
         
         guard twitter.isUserLoggedIn else {
@@ -54,4 +62,14 @@ extension Twitter {
     }
 }
 
+extension String {
+    
+    var isTwitterURL: Bool {
+        
+        if let url = URL(string: self), url.host == "twitter.com" {
+            return true
+        }
+        return false
+    }
+}
 

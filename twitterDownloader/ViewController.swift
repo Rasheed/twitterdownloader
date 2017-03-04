@@ -8,38 +8,50 @@
 
 import UIKit
 import Photos
+import Fabric
+import TwitterKit
 
 class ViewController: UIViewController {
+    
+    let twitter = Twitter.sharedInstance()
     
     @IBOutlet weak var linkField: UITextField!
     
     @IBAction func didClickDownload(_ sender: Any) {
+        
+        guard twitter.isUserLoggedIn else {
+            twitter.logIn { (session, error) in
+                if session != nil {
+                    self.downloadVideo()
+                }
+            }
+            return
+        }
         downloadVideo()
     }
     
     func downloadVideo() {
-        DispatchQueue.main.async {
-            if let urlString = self.linkField.text, let url = URL(string: urlString) {
-                
-                do {
-                    let urlData = try NSData(contentsOf: url)
-                    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
-                    let filePath="\(documentsPath)/tempFile.mp4";
-                    DispatchQueue.main.async {
-                        urlData?.write(toFile: filePath, atomically: true);
-                        PHPhotoLibrary.shared().performChanges({
-                            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
-                        }) { completed, error in
-                            if completed {
-                                print("Video is saved!")
-                            }
-                        }
-                    }
-                } catch {
-                    
-                }
-            }
+        
+        if let text = linkField.text, let url = URL(string: text) {
+            let videoFetcher = TwitterVideoFetcher()
+            videoFetcher.fetchVideoUrl(forUrl: url, { (videoUrl) in
+                let videoPersister = VideoPersister()
+                videoPersister.saveVideo(videoUrl)
+            })
+        } else {
+            // invalid url
         }
     }
 }
+
+extension Twitter {
+    
+    var isUserLoggedIn: Bool {
+        if let session = sessionStore.session() {
+            return !session.userID.isEmpty
+        }
+        return false
+    }
+}
+
 

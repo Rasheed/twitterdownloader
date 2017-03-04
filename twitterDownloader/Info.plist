@@ -43,10 +43,24 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Need to access photos</string>
-    <key>NSAppTransportSecurity</key>
+    <key>Fabric</key>
     <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
+        <key>APIKey</key>
+        <string>7fcaf29ebca26995fa033d12ed2e21be8bfa2f0f</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict>
+                    <key>consumerKey</key>
+                    <string>dgyWm8vqgkRmJmHgqAC5JwFxz</string>
+                    <key>consumerSecret</key>
+                    <string>r68QprHKdSVK93IFd4DRRHkzTUDabGwRtbPo4afLeVAdD8TX8Q</string>
+                </dict>
+                <key>KitName</key>
+                <string>Twitter</string>
+            </dict>
+        </array>
     </dict>
 </dict>
 </plist>

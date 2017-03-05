@@ -11,25 +11,21 @@ import Photos
 
 class VideoPersister {
     
-    func saveVideo(_ url: URL) {
+    func saveVideo(_ url: URL, _ completion: @escaping ((Bool)->())) {
         
         DispatchQueue.main.async {
-            do {
-                let urlData = try NSData(contentsOf: url)
-                let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
-                let filePath="\(documentsPath)/tempFile.mp4";
-                DispatchQueue.main.async {
-                    urlData?.write(toFile: filePath, atomically: true);
-                    PHPhotoLibrary.shared().performChanges({
-                        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
-                    }) { completed, error in
-                        if completed {
-                            print("Video is saved!")
-                        }
+            let urlData = NSData(contentsOf: url)
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
+            let filePath="\(documentsPath)/tempFile.mp4";
+            DispatchQueue.main.async {
+                urlData?.write(toFile: filePath, atomically: true);
+                PHPhotoLibrary.shared().performChanges({
+                    PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
+                }) { completed, error in
+                    if completed {
+                        completion(completed)
                     }
                 }
-            } catch {
-                
             }
         }
     }

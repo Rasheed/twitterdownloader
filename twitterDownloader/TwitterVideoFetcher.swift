@@ -14,7 +14,7 @@ class TwitterVideoFetcher {
     
     let twitter = Twitter.sharedInstance()
     
-    func fetchVideoUrl(forUrl url: URL, _ completion: @escaping ((URL)->())) {
+    func fetchVideoUrl(forUrl url: URL, _ completion: @escaping ((URL?)->())) {
         
         if let tweetId = url.tweetId,
             let userID = twitter.sessionStore.session()?.userID {
@@ -64,7 +64,9 @@ class TwitterVideoFetcher {
                 variants.append(videoVariant)
             }
         }
-        return variants
+        return variants.sorted(by: { (variant1, variant2) -> Bool in
+            return variant1.bitRate > variant2.bitRate
+        })
     }
 }
 

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,47 +23,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Tweet Link Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-SI-z1v">
-                                <rect key="frame" x="16" y="318" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gr5-v0-iTb">
-                                <rect key="frame" x="120.5" y="426" width="134" height="48"/>
-                                <color key="backgroundColor" red="0.1176470588" green="0.70980392160000005" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Download">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didClickDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbG-l9-D6x"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter Downloader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-r2-pxL">
-                                <rect key="frame" x="59" y="130" width="258" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dXU-pH-U1P">
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHi-u7-DgO">
+                                <rect key="frame" x="21" y="222.5" width="333" height="222"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMg-U8-SWr">
+                                        <rect key="frame" x="10" y="70" width="313" height="42"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Tweet Link Here" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-SI-z1v">
+                                                <rect key="frame" x="7" y="7" width="291" height="28"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.80129310344827587" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="xUl-SI-z1v" firstAttribute="leading" secondItem="HMg-U8-SWr" secondAttribute="leading" constant="7" id="3JT-GK-9Qy"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xUl-SI-z1v" secondAttribute="trailing" constant="7" id="9sv-J7-e4S"/>
+                                            <constraint firstItem="xUl-SI-z1v" firstAttribute="top" secondItem="HMg-U8-SWr" secondAttribute="top" constant="7" id="UK8-ok-qlf"/>
+                                            <constraint firstAttribute="bottom" secondItem="xUl-SI-z1v" secondAttribute="bottom" constant="7" id="bvh-0Y-nsP"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ci0-TW-Ow9" customClass="WCLShineButton" customModule="WCLShineButton">
+                                        <rect key="frame" x="141.5" y="142" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ci0-TW-Ow9" secondAttribute="height" multiplier="1:1" id="qkK-tn-VkX"/>
+                                            <constraint firstAttribute="width" constant="50" id="yCT-dX-VTW"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="clickedDownloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8L-t3-hKo"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.31530172413793106" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ci0-TW-Ow9" firstAttribute="centerX" secondItem="JHi-u7-DgO" secondAttribute="centerX" id="1O0-oM-jLk"/>
+                                    <constraint firstItem="ci0-TW-Ow9" firstAttribute="top" secondItem="HMg-U8-SWr" secondAttribute="bottom" constant="30" id="5Ic-i2-mcO"/>
+                                    <constraint firstItem="HMg-U8-SWr" firstAttribute="leading" secondItem="JHi-u7-DgO" secondAttribute="leading" constant="10" id="79L-d2-zs8"/>
+                                    <constraint firstAttribute="bottom" secondItem="ci0-TW-Ow9" secondAttribute="bottom" constant="30" id="IfE-nx-qyw"/>
+                                    <constraint firstItem="HMg-U8-SWr" firstAttribute="centerX" secondItem="JHi-u7-DgO" secondAttribute="centerX" id="Y6H-gw-cLx"/>
+                                    <constraint firstAttribute="trailing" secondItem="HMg-U8-SWr" secondAttribute="trailing" constant="10" id="dJx-Hk-feu"/>
+                                    <constraint firstItem="HMg-U8-SWr" firstAttribute="top" secondItem="JHi-u7-DgO" secondAttribute="top" constant="70" id="n4O-r7-Xg0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78l-3w-KVO" customClass="InstagramActivityIndicator" customModule="twitterDownloader" customModuleProvider="target">
+                                <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="cde-gH-T8W"/>
+                                    <constraint firstAttribute="width" constant="80" id="f29-W2-PW8"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Gr5-v0-iTb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4rl-1P-wyI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xUl-SI-z1v" secondAttribute="trailing" id="EsI-Ne-wPj"/>
-                            <constraint firstItem="KQZ-r2-pxL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="IlY-is-82W"/>
-                            <constraint firstItem="xUl-SI-z1v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jlr-22-bX8"/>
-                            <constraint firstItem="KQZ-r2-pxL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wf5-M4-4fv"/>
-                            <constraint firstItem="xUl-SI-z1v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cRD-xv-Fse"/>
-                            <constraint firstItem="Gr5-v0-iTb" firstAttribute="top" secondItem="xUl-SI-z1v" secondAttribute="bottom" constant="78" id="p28-4E-vm7"/>
+                            <constraint firstItem="JHi-u7-DgO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0T3-Cu-yqg"/>
+                            <constraint firstItem="dXU-pH-U1P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0rI-fi-DYw"/>
+                            <constraint firstItem="JHi-u7-DgO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zK-9t-9MI"/>
+                            <constraint firstItem="78l-3w-KVO" firstAttribute="centerY" secondItem="JHi-u7-DgO" secondAttribute="centerY" id="Acr-l0-SlR"/>
+                            <constraint firstItem="dXU-pH-U1P" firstAttribute="centerY" secondItem="JHi-u7-DgO" secondAttribute="centerY" id="Cri-hy-ERm"/>
+                            <constraint firstItem="dXU-pH-U1P" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Xdc-Ru-6Me"/>
+                            <constraint firstItem="78l-3w-KVO" firstAttribute="centerX" secondItem="JHi-u7-DgO" secondAttribute="centerX" id="gzK-2u-kDb"/>
+                            <constraint firstItem="JHi-u7-DgO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="nbd-R0-vU5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JHi-u7-DgO" secondAttribute="trailing" constant="5" id="qcH-QE-Jsb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="78l-3w-KVO" id="eEI-4I-AFz"/>
+                        <outlet property="downloadButton" destination="ci0-TW-Ow9" id="dRf-hE-GXN"/>
                         <outlet property="linkField" destination="xUl-SI-z1v" id="qoB-Qb-Ct9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="95.802098950524751"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="800" height="600"/>
+    </resources>
 </document>

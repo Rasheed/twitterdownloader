@@ -13,20 +13,26 @@ class VideoPersister {
     
     func saveVideo(_ url: URL, _ completion: @escaping ((Bool)->())) {
         
-        DispatchQueue.main.async {
-            let urlData = NSData(contentsOf: url)
-            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
-            let filePath="\(documentsPath)/tempFile.mp4";
-            DispatchQueue.main.async {
-                urlData?.write(toFile: filePath, atomically: true);
-                PHPhotoLibrary.shared().performChanges({
-                    PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
-                }) { completed, error in
-                    if completed {
-                        completion(completed)
+        PHPhotoLibrary.requestAuthorization { (status) in
+            if status == .authorized {
+                DispatchQueue.main.async {
+                    let urlData = NSData(contentsOf: url)
+                    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0];
+                    let filePath="\(documentsPath)/tempFile.mp4";
+                    DispatchQueue.main.async {
+                        urlData?.write(toFile: filePath, atomically: true);
+                        PHPhotoLibrary.shared().performChanges({
+                            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
+                        }) { completed, error in
+                            if completed {
+                                completion(completed)
+                            }
+                        }
                     }
                 }
             }
         }
+        
+
     }
 }

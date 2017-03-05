@@ -252,7 +252,7 @@
 				TargetAttributes = {
 					52EA61991E533B4400EF3CC9 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Z42T35L6W6;
+						DevelopmentTeam = YZYUY355C8;
 						ProvisioningStyle = Automatic;
 					};
 					52EA61AD1E533B4400EF3CC9 = {
@@ -627,8 +627,9 @@
 			baseConfigurationReference = 6FE1F7C0D2B167680F854667 /* Pods-twitterDownloader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z42T35L6W6;
+				DEVELOPMENT_TEAM = YZYUY355C8;
 				INFOPLIST_FILE = twitterDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -641,8 +642,9 @@
 			baseConfigurationReference = 01D36CEFEC3B06E012666E89 /* Pods-twitterDownloader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z42T35L6W6;
+				DEVELOPMENT_TEAM = YZYUY355C8;
 				INFOPLIST_FILE = twitterDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

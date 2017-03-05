@@ -27,13 +27,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="800" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHi-u7-DgO">
-                                <rect key="frame" x="21" y="222.5" width="333" height="222"/>
+                                <rect key="frame" x="21" y="223" width="333" height="222"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMg-U8-SWr">
                                         <rect key="frame" x="10" y="70" width="313" height="42"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Tweet Link Here" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-SI-z1v">
-                                                <rect key="frame" x="7" y="7" width="291" height="28"/>
+                                                <rect key="frame" x="7" y="7" width="295" height="28"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -42,7 +42,7 @@
                                         <color key="backgroundColor" white="1" alpha="0.80129310344827587" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="xUl-SI-z1v" firstAttribute="leading" secondItem="HMg-U8-SWr" secondAttribute="leading" constant="7" id="3JT-GK-9Qy"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="xUl-SI-z1v" secondAttribute="trailing" constant="7" id="9sv-J7-e4S"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xUl-SI-z1v" secondAttribute="trailing" constant="3" id="9sv-J7-e4S"/>
                                             <constraint firstItem="xUl-SI-z1v" firstAttribute="top" secondItem="HMg-U8-SWr" secondAttribute="top" constant="7" id="UK8-ok-qlf"/>
                                             <constraint firstAttribute="bottom" secondItem="xUl-SI-z1v" secondAttribute="bottom" constant="7" id="bvh-0Y-nsP"/>
                                         </constraints>
@@ -59,7 +59,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ci0-TW-Ow9" customClass="WCLShineButton" customModule="WCLShineButton">
-                                        <rect key="frame" x="141.5" y="142" width="50" height="50"/>
+                                        <rect key="frame" x="142" y="142" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ci0-TW-Ow9" secondAttribute="height" multiplier="1:1" id="qkK-tn-VkX"/>
                                             <constraint firstAttribute="width" constant="50" id="yCT-dX-VTW"/>
@@ -92,7 +92,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78l-3w-KVO" customClass="InstagramActivityIndicator" customModule="twitterDownloader" customModuleProvider="target">
-                                <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                                <rect key="frame" x="148" y="294" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="cde-gH-T8W"/>
                                     <constraint firstAttribute="width" constant="80" id="f29-W2-PW8"/>

@@ -11,7 +11,6 @@ import Photos
 import Fabric
 import TwitterKit
 import WCLShineButton
-import ZAlertView
 
 class ViewController: UIViewController {
     
@@ -39,6 +38,12 @@ class ViewController: UIViewController {
         downloadButton.image = .custom(#imageLiteral(resourceName: "download"))
         downloadButton.fillColor = purple
         downloadButton.color = UIColor.white
+        
+        if !twitter.isUserLoggedIn {
+            twitter.logIn { (session, error) in
+
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,9 +71,7 @@ class ViewController: UIViewController {
         
         if let text = linkField.text, let url = URL(string: text) {
             
-            activityIndicator.isHidden = false
-            activityIndicator.startAnimating()
-            
+            showActivityIndicator()
             let videoFetcher = TwitterVideoFetcher()
             videoFetcher.fetchVideoUrl(forUrl: url, { (videoUrl) in
                 if let videoUrl = videoUrl {
@@ -77,29 +80,54 @@ class ViewController: UIViewController {
                         
                         if success {
                             DispatchQueue.main.async {
-                                self.activityIndicator.isHidden = true
-                                self.activityIndicator.stopAnimating()
+                                self.hideActivityIndicator()
                                 self.showAlert(withTitle: "Video Saved!", message: "Your video is now in your camera roll")
                             }
                         }
                     })
                 } else {
                     DispatchQueue.main.async {
-                        
+                        self.hideActivityIndicator()
                         self.showAlert(withTitle: "Couldn't find video in tweet", message: nil)
                     }
                 }
             })
         } else {
-            showAlert(withTitle: "Invalid Link", message: nil)
+            DispatchQueue.main.async {
+                self.hideActivityIndicator()
+                self.showAlert(withTitle: "Invalid Link", message: nil)
+            }
         }
+    }
+
+    func hideActivityIndicator() {
+        
+        guard !self.activityIndicator.isHidden else {
+            return
+        }
+        
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.alpha = 1.0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.activityIndicator.alpha = 0.0
+            self.activityIndicator.stopAnimating()
+        })
+    }
+    
+    func showActivityIndicator() {
+        
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.alpha = 0.0
+        UIView.animate(withDuration: 0.3, animations: { 
+            self.activityIndicator.alpha = 1.0
+            self.activityIndicator.startAnimating()
+        })
     }
     
     func showAlert(withTitle title: String, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-        
     }
 }
 

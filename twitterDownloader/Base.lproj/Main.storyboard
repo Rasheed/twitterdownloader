@@ -23,8 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dXU-pH-U1P">
-                                <rect key="frame" x="0.0" y="0.0" width="800" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dXU-pH-U1P">
+                                <rect key="frame" x="0.0" y="0.0" width="359" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHi-u7-DgO">
                                 <rect key="frame" x="21" y="223" width="333" height="222"/>
@@ -106,7 +106,9 @@
                             <constraint firstItem="JHi-u7-DgO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1zK-9t-9MI"/>
                             <constraint firstItem="78l-3w-KVO" firstAttribute="centerY" secondItem="JHi-u7-DgO" secondAttribute="centerY" id="Acr-l0-SlR"/>
                             <constraint firstItem="dXU-pH-U1P" firstAttribute="centerY" secondItem="JHi-u7-DgO" secondAttribute="centerY" id="Cri-hy-ERm"/>
+                            <constraint firstItem="dXU-pH-U1P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="OD5-2p-7e8"/>
                             <constraint firstItem="dXU-pH-U1P" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Xdc-Ru-6Me"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dXU-pH-U1P" secondAttribute="trailing" id="dhy-Iv-jyP"/>
                             <constraint firstItem="78l-3w-KVO" firstAttribute="centerX" secondItem="JHi-u7-DgO" secondAttribute="centerX" id="gzK-2u-kDb"/>
                             <constraint firstItem="JHi-u7-DgO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="nbd-R0-vU5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JHi-u7-DgO" secondAttribute="trailing" constant="5" id="qcH-QE-Jsb"/>

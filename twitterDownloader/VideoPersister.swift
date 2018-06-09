@@ -24,9 +24,7 @@ class VideoPersister {
                         PHPhotoLibrary.shared().performChanges({
                             PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: filePath))
                         }) { completed, error in
-                            if completed {
-                                completion(completed)
-                            }
+                            completion(completed)
                         }
                     }
                 }

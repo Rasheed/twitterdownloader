@@ -112,13 +112,15 @@ class ViewController: UIViewController {
             self.activityIndicator.alpha = 0.0
             self.activityIndicator.stopAnimating()
         })
+        
+        self.downloadButton.isSelected = false
     }
     
     func showActivityIndicator() {
         
         self.activityIndicator.isHidden = true
         self.activityIndicator.alpha = 0.0
-        UIView.animate(withDuration: 0.3, animations: { 
+        UIView.animate(withDuration: 0.45, animations: {
             self.activityIndicator.alpha = 1.0
             self.activityIndicator.startAnimating()
         })

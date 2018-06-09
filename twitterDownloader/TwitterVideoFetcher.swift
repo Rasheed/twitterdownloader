@@ -20,7 +20,7 @@ class TwitterVideoFetcher {
             let userID = twitter.sessionStore.session()?.userID {
             let client = TWTRAPIClient(userID: userID)
             let statusesShowEndpoint = "https://api.twitter.com/1.1/statuses/show.json"
-            let params = ["id": tweetId, "include_entities":"true"]
+            let params = ["id": tweetId, "include_entities":"true", "tweet_mode":"extended"]
             var clientError : NSError?
             let request = client.urlRequest(withMethod: "GET", url: statusesShowEndpoint, parameters: params, error: &clientError)
             client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
@@ -31,24 +31,29 @@ class TwitterVideoFetcher {
                 if let data = data, let variant = self.parse(data: data)?[0] {
                 
                     completion(variant.url)
+                } else {
+                    completion(nil)
                 }
             }
+        } else {
+            completion(nil)
         }
     }
     
     func parse(data: Data) -> [VideoVariant]? {
         
         do {
-            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary,
-                let extendedEntitites = json.object(forKey: "extended_entities") as? NSDictionary,
-                let media = extendedEntitites.object(forKey: "media") as? NSArray,
-                let firstMedia = media.firstObject as? NSDictionary {
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                 
-//                let type = firstMedia.object(forKey: "type") as! String
-                let videoInfo = firstMedia.object(forKey: "video_info") as! NSDictionary
-                let videoVariants = videoInfo.object(forKey: "variants") as! NSArray
-                
-                return self.videoVariants(fromArray: videoVariants)
+                if let extendedEntitites = json.object(forKey: "extended_entities") as? NSDictionary,
+                    let media = extendedEntitites.object(forKey: "media") as? NSArray,
+                    let firstMedia = media.firstObject as? NSDictionary,
+                    let videoInfo = firstMedia.object(forKey: "video_info") as? NSDictionary,
+                    let videoVariants = videoInfo.object(forKey: "variants") as? NSArray {
+                    
+                    return self.videoVariants(fromArray: videoVariants)
+                }
+                print(json)
             }
         } catch let jsonError as NSError {
             print("json error: \(jsonError.localizedDescription)")

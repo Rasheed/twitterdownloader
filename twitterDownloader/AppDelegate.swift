@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Fabric
 import TwitterKit
 
 @UIApplicationMain
@@ -15,11 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Fabric.with([Twitter.self])
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Twitter.sharedInstance().start(withConsumerKey: "vpERtlFOoJH0aQdX2ARxMAarv", consumerSecret: "Kyvo9woGuJRrThppHP78EEU6vDIPKMGIYCxA6vphztqdWRDynV")
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return Twitter.sharedInstance().application(app, open: url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

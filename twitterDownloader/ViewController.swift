@@ -8,7 +8,6 @@
 
 import UIKit
 import Photos
-import Fabric
 import TwitterKit
 import WCLShineButton
 
@@ -25,7 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         activityIndicator.isHidden = true
         activityIndicator.strokeColor = peach
         activityIndicator.alpha = 0.8
@@ -48,7 +47,13 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        if let urlString = UIPasteboard.general.string, urlString.isTwitterURL {
+            linkField.text = urlString
+        }
+    }
+    
+    override func applicationFinishedRestoringState() {
+        super.applicationFinishedRestoringState()
         if let urlString = UIPasteboard.general.string, urlString.isTwitterURL {
             linkField.text = urlString
         }
@@ -127,8 +132,8 @@ class ViewController: UIViewController {
     }
     
     func showAlert(withTitle title: String, message: String?) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }

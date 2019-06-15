@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Fabric
 import TwitterKit
 
 class TwitterVideoFetcher {
@@ -25,7 +24,7 @@ class TwitterVideoFetcher {
             let request = client.urlRequest(withMethod: "GET", url: statusesShowEndpoint, parameters: params, error: &clientError)
             client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
                 if connectionError != nil {
-                    print("Error: \(connectionError)")
+                    print("Error: \(String(describing: connectionError))")
                 }
                 
                 if let data = data, let variant = self.parse(data: data)?[0] {

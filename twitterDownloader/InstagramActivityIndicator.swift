@@ -72,7 +72,7 @@ public final class InstagramActivityIndicator: UIView {
         
         // configure the shape layer that gets replicated
         let dot = CAShapeLayer()
-        dot.lineCap = kCALineCapRound
+        dot.lineCap = CAShapeLayerLineCap.round
         dot.strokeColor = strokeColor.cgColor
         dot.lineWidth = lineWidth
         dot.fillColor = nil
@@ -134,7 +134,7 @@ public final class InstagramActivityIndicator: UIView {
         shrinkStart.duration = animationDuration // * 1.5
         shrinkStart.autoreverses = true
         shrinkStart.repeatCount = Float.infinity
-        shrinkStart.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        shrinkStart.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         let shrinkEnd = CABasicAnimation(keyPath: "strokeEnd")
         shrinkEnd.fromValue = 1.0
@@ -142,7 +142,7 @@ public final class InstagramActivityIndicator: UIView {
         shrinkEnd.duration = animationDuration // * 1.5
         shrinkEnd.autoreverses = true
         shrinkEnd.repeatCount = Float.infinity
-        shrinkEnd.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        shrinkEnd.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         let fade = CABasicAnimation(keyPath: "lineWidth")
         fade.fromValue = lineWidth

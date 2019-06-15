@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,9 +28,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0pC-as-Be3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="BgI-yE-9qK"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="0pC-as-Be3" secondAttribute="bottom" id="Rb1-uN-CxL"/>
+                            <constraint firstAttribute="bottom" secondItem="0pC-as-Be3" secondAttribute="bottom" id="Rb1-uN-CxL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0pC-as-Be3" secondAttribute="trailing" id="avO-Rd-D10"/>
-                            <constraint firstItem="0pC-as-Be3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="nF7-Pw-IZK"/>
+                            <constraint firstItem="0pC-as-Be3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nF7-Pw-IZK"/>
                         </constraints>
                     </view>
                 </viewController>

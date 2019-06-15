@@ -1,0 +1,29 @@
+PODS:
+  - Fabric (1.10.1)
+  - TwitterCore (3.0.3)
+  - TwitterKit (3.2.2):
+    - TwitterCore (>= 3.0.3)
+  - WCLShineButton (1.0.8)
+
+DEPENDENCIES:
+  - Fabric
+  - TwitterCore (< 3.1.0)
+  - TwitterKit (< 3.3.0)
+  - WCLShineButton
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Fabric
+    - TwitterCore
+    - TwitterKit
+    - WCLShineButton
+
+SPEC CHECKSUMS:
+  Fabric: f6f21452846788bb44595d73e9909d79d328e617
+  TwitterCore: 549c74ed5f3d6134392dc944c6d215e233e50ad8
+  TwitterKit: b9feccfc70bef86fe389c06a63a72fed9f020b9c
+  WCLShineButton: 315ee9b0024b1cc56dba34fb6a8878937eb8d0b1
+
+PODFILE CHECKSUM: 90de2bcc045a8213fd85feb93ac9e74e0ea1cc03
+
+COCOAPODS: 1.5.3

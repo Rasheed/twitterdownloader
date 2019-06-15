@@ -1,0 +1,6 @@
+framework module Pods_twitterDownloader {
+  umbrella header "Pods-twitterDownloader-umbrella.h"
+
+  export *
+  module * { export * }
+}

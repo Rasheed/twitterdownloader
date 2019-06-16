@@ -1,15 +1,8 @@
-//
-//  ViewController.swift
-//  twitterDownloader
-//
-//  Created by Rasheed Wihaib on 14/02/2017.
-//  Copyright © 2017 Rasheed Wihaib. All rights reserved.
-//
-
 import UIKit
 import Photos
 import TwitterKit
 import WCLShineButton
+import Firebase
 
 class ViewController: UIViewController {
     
@@ -19,19 +12,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var linkField: UITextField!
     @IBOutlet weak var downloadButton: WCLShineButton!
     
-    let peach = UIColor(rgb: (r:231, g:136, b:114))
-    let purple = UIColor(rgb: (r:51, g:40, b:96))
+    let purple = UIColor(rgb: (r: 138, g: 43, b: 226))
+    let blue = UIColor(rgb: (r :0, g: 206, b: 209))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        linkField.delegate = self
+        
         activityIndicator.isHidden = true
-        activityIndicator.strokeColor = peach
+        activityIndicator.strokeColor = purple
         activityIndicator.alpha = 0.8
         
         var shineParams = WCLShineParams()
-        shineParams.bigShineColor = peach
+        shineParams.bigShineColor = purple
         shineParams.smallShineColor = purple
+        shineParams.enableFlashing = true
+        shineParams.colorRandom = [blue, purple, .white, blue, purple, .white]
         
         downloadButton.params = shineParams
         downloadButton.image = .custom(#imageLiteral(resourceName: "download"))
@@ -43,17 +40,18 @@ class ViewController: UIViewController {
 
             }
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @objc func applicationDidBecomeActive() {
         if let urlString = UIPasteboard.general.string, urlString.isTwitterURL {
             linkField.text = urlString
         }
     }
     
-    override func applicationFinishedRestoringState() {
-        super.applicationFinishedRestoringState()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let urlString = UIPasteboard.general.string, urlString.isTwitterURL {
             linkField.text = urlString
         }
@@ -84,6 +82,9 @@ class ViewController: UIViewController {
                     videoPersister.saveVideo(videoUrl, { (success) in
                         
                         if success {
+                            Analytics.logEvent("save_success", parameters: [
+                                "urlString": text as NSObject,
+                            ])
                             DispatchQueue.main.async {
                                 self.hideActivityIndicator()
                                 self.showAlert(withTitle: "Video Saved!", message: "Your video is now in your camera roll")
@@ -91,6 +92,9 @@ class ViewController: UIViewController {
                         }
                     })
                 } else {
+                    Analytics.logEvent("save_error", parameters: [
+                        "urlString": text as NSObject,
+                    ])
                     DispatchQueue.main.async {
                         self.hideActivityIndicator()
                         self.showAlert(withTitle: "Couldn't find video in tweet", message: nil)
@@ -159,3 +163,9 @@ extension String {
     }
 }
 
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+}

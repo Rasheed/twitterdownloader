@@ -30,14 +30,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMg-U8-SWr">
                                         <rect key="frame" x="10" y="70" width="313" height="42"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Tweet Link Here" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-SI-z1v">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Tweet Link Here" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-SI-z1v">
                                                 <rect key="frame" x="7" y="7" width="295" height="28"/>
+                                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.80129310344827587" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="xUl-SI-z1v" firstAttribute="leading" secondItem="HMg-U8-SWr" secondAttribute="leading" constant="7" id="3JT-GK-9Qy"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="xUl-SI-z1v" secondAttribute="trailing" constant="3" id="9sv-J7-e4S"/>
@@ -67,7 +68,7 @@
                                         </connections>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.31530172413793106" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ci0-TW-Ow9" firstAttribute="centerX" secondItem="JHi-u7-DgO" secondAttribute="centerX" id="1O0-oM-jLk"/>
                                     <constraint firstItem="ci0-TW-Ow9" firstAttribute="top" secondItem="HMg-U8-SWr" secondAttribute="bottom" constant="30" id="5Ic-i2-mcO"/>
@@ -123,6 +124,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="800" height="600"/>
+        <image name="background" width="600" height="800"/>
     </resources>
 </document>

@@ -7,38 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2DA6BB22B64CCC0026E26F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E2DA6BA22B64CCC0026E26F /* GoogleService-Info.plist */; };
 		52EA619E1E533B4400EF3CC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA619D1E533B4400EF3CC9 /* AppDelegate.swift */; };
 		52EA61A01E533B4400EF3CC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA619F1E533B4400EF3CC9 /* ViewController.swift */; };
 		52EA61A31E533B4400EF3CC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EA61A11E533B4400EF3CC9 /* Main.storyboard */; };
 		52EA61A51E533B4400EF3CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EA61A41E533B4400EF3CC9 /* Assets.xcassets */; };
 		52EA61A81E533B4400EF3CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EA61A61E533B4400EF3CC9 /* LaunchScreen.storyboard */; };
-		52EA61B31E533B4400EF3CC9 /* twitterDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA61B21E533B4400EF3CC9 /* twitterDownloaderTests.swift */; };
-		52EA61BE1E533B4400EF3CC9 /* twitterDownloaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA61BD1E533B4400EF3CC9 /* twitterDownloaderUITests.swift */; };
 		52EC4C001E6B581700D100A4 /* TwitterVideoFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC4BFF1E6B581700D100A4 /* TwitterVideoFetcher.swift */; };
 		52EC4C021E6B5FB700D100A4 /* VideoPersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC4C011E6B5FB700D100A4 /* VideoPersister.swift */; };
 		52F0A8F41E6C49410091B32C /* InstagramActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F0A8F31E6C49410091B32C /* InstagramActivityIndicator.swift */; };
 		9BFAAE79D7F625D94FB3F0B9 /* Pods_twitterDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4452E4D3D0A0E84DF46808 /* Pods_twitterDownloader.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		52EA61AF1E533B4400EF3CC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52EA61921E533B4400EF3CC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52EA61991E533B4400EF3CC9;
-			remoteInfo = twitterDownloader;
-		};
-		52EA61BA1E533B4400EF3CC9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52EA61921E533B4400EF3CC9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52EA61991E533B4400EF3CC9;
-			remoteInfo = twitterDownloader;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		01D36CEFEC3B06E012666E89 /* Pods-twitterDownloader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitterDownloader.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitterDownloader/Pods-twitterDownloader.release.xcconfig"; sourceTree = "<group>"; };
+		1E2DA6BA22B64CCC0026E26F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52EA619A1E533B4400EF3CC9 /* twitterDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitterDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EA619D1E533B4400EF3CC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52EA619F1E533B4400EF3CC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,12 +29,6 @@
 		52EA61A41E533B4400EF3CC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52EA61A71E533B4400EF3CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52EA61A91E533B4400EF3CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52EA61AE1E533B4400EF3CC9 /* twitterDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitterDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52EA61B21E533B4400EF3CC9 /* twitterDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterDownloaderTests.swift; sourceTree = "<group>"; };
-		52EA61B41E533B4400EF3CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52EA61B91E533B4400EF3CC9 /* twitterDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitterDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52EA61BD1E533B4400EF3CC9 /* twitterDownloaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterDownloaderUITests.swift; sourceTree = "<group>"; };
-		52EA61BF1E533B4400EF3CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EC4BFF1E6B581700D100A4 /* TwitterVideoFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterVideoFetcher.swift; sourceTree = "<group>"; };
 		52EC4C011E6B5FB700D100A4 /* VideoPersister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPersister.swift; sourceTree = "<group>"; };
 		52F0A8F31E6C49410091B32C /* InstagramActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramActivityIndicator.swift; sourceTree = "<group>"; };
@@ -67,20 +44,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFAAE79D7F625D94FB3F0B9 /* Pods_twitterDownloader.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52EA61AB1E533B4400EF3CC9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52EA61B61E533B4400EF3CC9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				52EA619C1E533B4400EF3CC9 /* twitterDownloader */,
-				52EA61B11E533B4400EF3CC9 /* twitterDownloaderTests */,
-				52EA61BC1E533B4400EF3CC9 /* twitterDownloaderUITests */,
 				52EA619B1E533B4400EF3CC9 /* Products */,
 				F63CBD5EB49140B8D6D1250B /* Pods */,
 				1002BCFC2920CC86255DDCB8 /* Frameworks */,
@@ -113,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				52EA619A1E533B4400EF3CC9 /* twitterDownloader.app */,
-				52EA61AE1E533B4400EF3CC9 /* twitterDownloaderTests.xctest */,
-				52EA61B91E533B4400EF3CC9 /* twitterDownloaderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,26 +90,9 @@
 				52EC4BFF1E6B581700D100A4 /* TwitterVideoFetcher.swift */,
 				52EC4C011E6B5FB700D100A4 /* VideoPersister.swift */,
 				52F0A8F31E6C49410091B32C /* InstagramActivityIndicator.swift */,
+				1E2DA6BA22B64CCC0026E26F /* GoogleService-Info.plist */,
 			);
 			path = twitterDownloader;
-			sourceTree = "<group>";
-		};
-		52EA61B11E533B4400EF3CC9 /* twitterDownloaderTests */ = {
-			isa = PBXGroup;
-			children = (
-				52EA61B21E533B4400EF3CC9 /* twitterDownloaderTests.swift */,
-				52EA61B41E533B4400EF3CC9 /* Info.plist */,
-			);
-			path = twitterDownloaderTests;
-			sourceTree = "<group>";
-		};
-		52EA61BC1E533B4400EF3CC9 /* twitterDownloaderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				52EA61BD1E533B4400EF3CC9 /* twitterDownloaderUITests.swift */,
-				52EA61BF1E533B4400EF3CC9 /* Info.plist */,
-			);
-			path = twitterDownloaderUITests;
 			sourceTree = "<group>";
 		};
 		F63CBD5EB49140B8D6D1250B /* Pods */ = {
@@ -186,42 +128,6 @@
 			productReference = 52EA619A1E533B4400EF3CC9 /* twitterDownloader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52EA61AD1E533B4400EF3CC9 /* twitterDownloaderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52EA61C51E533B4400EF3CC9 /* Build configuration list for PBXNativeTarget "twitterDownloaderTests" */;
-			buildPhases = (
-				52EA61AA1E533B4400EF3CC9 /* Sources */,
-				52EA61AB1E533B4400EF3CC9 /* Frameworks */,
-				52EA61AC1E533B4400EF3CC9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52EA61B01E533B4400EF3CC9 /* PBXTargetDependency */,
-			);
-			name = twitterDownloaderTests;
-			productName = twitterDownloaderTests;
-			productReference = 52EA61AE1E533B4400EF3CC9 /* twitterDownloaderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		52EA61B81E533B4400EF3CC9 /* twitterDownloaderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52EA61C81E533B4400EF3CC9 /* Build configuration list for PBXNativeTarget "twitterDownloaderUITests" */;
-			buildPhases = (
-				52EA61B51E533B4400EF3CC9 /* Sources */,
-				52EA61B61E533B4400EF3CC9 /* Frameworks */,
-				52EA61B71E533B4400EF3CC9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52EA61BB1E533B4400EF3CC9 /* PBXTargetDependency */,
-			);
-			name = twitterDownloaderUITests;
-			productName = twitterDownloaderUITests;
-			productReference = 52EA61B91E533B4400EF3CC9 /* twitterDownloaderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -236,16 +142,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = YZYUY355C8;
 						ProvisioningStyle = Automatic;
-					};
-					52EA61AD1E533B4400EF3CC9 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 52EA61991E533B4400EF3CC9;
-					};
-					52EA61B81E533B4400EF3CC9 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 52EA61991E533B4400EF3CC9;
 					};
 				};
 			};
@@ -264,8 +160,6 @@
 			projectRoot = "";
 			targets = (
 				52EA61991E533B4400EF3CC9 /* twitterDownloader */,
-				52EA61AD1E533B4400EF3CC9 /* twitterDownloaderTests */,
-				52EA61B81E533B4400EF3CC9 /* twitterDownloaderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,22 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52EA61A81E533B4400EF3CC9 /* LaunchScreen.storyboard in Resources */,
+				1E2DA6BB22B64CCC0026E26F /* GoogleService-Info.plist in Resources */,
 				52EA61A51E533B4400EF3CC9 /* Assets.xcassets in Resources */,
 				52EA61A31E533B4400EF3CC9 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52EA61AC1E533B4400EF3CC9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52EA61B71E533B4400EF3CC9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +204,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-twitterDownloader/Pods-twitterDownloader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 				"${BUILT_PRODUCTS_DIR}/WCLShineButton/WCLShineButton.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Macaw.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCLShineButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -382,36 +271,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52EA61AA1E533B4400EF3CC9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52EA61B31E533B4400EF3CC9 /* twitterDownloaderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52EA61B51E533B4400EF3CC9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52EA61BE1E533B4400EF3CC9 /* twitterDownloaderUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		52EA61B01E533B4400EF3CC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52EA61991E533B4400EF3CC9 /* twitterDownloader */;
-			targetProxy = 52EA61AF1E533B4400EF3CC9 /* PBXContainerItemProxy */;
-		};
-		52EA61BB1E533B4400EF3CC9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52EA61991E533B4400EF3CC9 /* twitterDownloader */;
-			targetProxy = 52EA61BA1E533B4400EF3CC9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		52EA61A11E533B4400EF3CC9 /* Main.storyboard */ = {
@@ -535,7 +395,7 @@
 				INFOPLIST_FILE = twitterDownloader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simple.twittersaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -550,63 +410,9 @@
 				INFOPLIST_FILE = twitterDownloader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simple.twittersaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		52EA61C61E533B4400EF3CC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = twitterDownloaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitterDownloader.app/twitterDownloader";
-			};
-			name = Debug;
-		};
-		52EA61C71E533B4400EF3CC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = twitterDownloaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitterDownloader.app/twitterDownloader";
-			};
-			name = Release;
-		};
-		52EA61C91E533B4400EF3CC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = twitterDownloaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = twitterDownloader;
-			};
-			name = Debug;
-		};
-		52EA61CA1E533B4400EF3CC9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = twitterDownloaderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tester.twitterDownloaderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = twitterDownloader;
 			};
 			name = Release;
 		};
@@ -627,24 +433,6 @@
 			buildConfigurations = (
 				52EA61C31E533B4400EF3CC9 /* Debug */,
 				52EA61C41E533B4400EF3CC9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52EA61C51E533B4400EF3CC9 /* Build configuration list for PBXNativeTarget "twitterDownloaderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52EA61C61E533B4400EF3CC9 /* Debug */,
-				52EA61C71E533B4400EF3CC9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52EA61C81E533B4400EF3CC9 /* Build configuration list for PBXNativeTarget "twitterDownloaderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52EA61C91E533B4400EF3CC9 /* Debug */,
-				52EA61CA1E533B4400EF3CC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
